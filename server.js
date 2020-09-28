@@ -14,6 +14,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
+require("./routes")(app);
+
 app.get("/", function (req, res) {
   res.send("Welcome to Slack Server");
 });
