@@ -2,6 +2,24 @@ const express = require("express"),
   app = express(),
   cors = require("cors"),
   responseTime = require("response-time");
+  swaggerJSDoc = require('swagger-jsdoc'),
+  swaggerUi = require('swagger-ui-express');
+
+const swaggerOptions = {
+  swaggerDefinition: {
+    info: {
+      title: "Slack API Documentation",
+      contact: {
+        name: "Namardeep Sood",
+      },
+    },
+  },
+  apis: ["./routes/*.js"]
+};
+
+const swaggerDocs = swaggerJSDoc(swaggerOptions);
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 
 app.use(
