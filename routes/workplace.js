@@ -1,5 +1,5 @@
 module.exports = function (app) {
-    const Joi = require("joi");
+    const Joi = require('@hapi/joi');
     const controller = require("../controllers/workplace.js");
     const universalFunctions = require("../universal-functions");
     // Routes

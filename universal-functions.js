@@ -1,5 +1,5 @@
 const boom = require("@hapi/boom");
-const Joi = require('joi');
+const Joi = require('@hapi/joi');
 const jwt = require('jsonwebtoken');
 
 
